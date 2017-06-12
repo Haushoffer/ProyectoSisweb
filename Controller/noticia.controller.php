@@ -15,7 +15,7 @@ class NoticiaController{
         require_once 'view/footer.php';
     }
     public function Noticia(){
-        require_once 'view/header.php';
+        require_once 'view/headerUser.php';
         require_once 'view/noticia/noticias.php';
         require_once 'view/footer.php';
     }
@@ -72,7 +72,7 @@ class NoticiaController{
         if(isset($_REQUEST['id'])){
             $pvd = $this->model->Obtener($_REQUEST['id']);
         }
-        require_once 'view/header.php';
+        require_once 'view/headerUser.php';
         require_once 'view/noticia/mostrarNoticia.php';
         require_once 'view/footer.php';
     }

@@ -9,7 +9,13 @@
 		<div class="segment">
 	      <h4> <?php echo $pvd->autor; ?></h4>
 	    </div>
+	<br>
+	<div>
+		<a class="ui blue button" href="?c=noticia&a=Noticia">
+		    <i class="newspaper icon"></i>Show All</a>
+	</div>
 	</center>
+
 
 </body>
 
