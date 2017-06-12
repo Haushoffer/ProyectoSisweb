@@ -12,7 +12,11 @@
 		<a class="ui green button" href="?c=noticia&a=Nuevo">
 		    <i class="plus icon"></i> Nueva Noticia</a>
 	</div>
-
+	<br>
+	<div>
+		<a class="ui blue button" href="?c=noticia&a=Noticia">
+		    <i class="user icon"></i>User view</a>
+	</div>
 
 	<div class="ui segment">
 	<table class="ui celled padded table">
