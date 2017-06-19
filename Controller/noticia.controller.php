@@ -10,14 +10,14 @@ class NoticiaController{
     }
 
     public function Index(){
-        require_once 'view/header.php';
+   
         require_once 'view/noticia/noticia.php';
-        require_once 'view/footer.php';
+     
     }
     public function Noticia(){
-        require_once 'view/headerUser.php';
+       
         require_once 'view/noticia/noticias.php';
-        require_once 'view/footer.php';
+       
     }
 
     public function Crud(){
@@ -27,17 +27,14 @@ class NoticiaController{
             $pvd = $this->model->Obtener($_REQUEST['id']);
         }
 
-        require_once 'view/header.php';
+      
         require_once 'view/noticia/noticia-editar.php';
-        require_once 'view/footer.php';
+       
   }
 
     public function Nuevo(){
         $pvd = new noticia();
-
-        require_once 'view/header.php';
-        require_once 'view/noticia/noticia-nuevo.php';
-        require_once 'view/footer.php';
+        require_once 'view/noticia/noticia-nuevo.php'; 
     }
 
     public function Guardar(){
@@ -72,9 +69,9 @@ class NoticiaController{
         if(isset($_REQUEST['id'])){
             $pvd = $this->model->Obtener($_REQUEST['id']);
         }
-        require_once 'view/headerUser.php';
+        
         require_once 'view/noticia/mostrarNoticia.php';
-        require_once 'view/footer.php';
+     
     }
 
     public function Eliminar(){
