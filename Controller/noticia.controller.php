@@ -44,6 +44,7 @@ class NoticiaController{
         $pvd->title = $_REQUEST['title'];
         $pvd->content = $_REQUEST['content'];
         $pvd->autor = $_REQUEST['autor'];
+        $pvd->image = $_REQUEST['image'];
         $this->model->Registrar($pvd);
 
         header('Location: index.php');
@@ -56,6 +57,7 @@ class NoticiaController{
         $pvd->title = $_REQUEST['title'];
         $pvd->content = $_REQUEST['content'];
         $pvd->autor = $_REQUEST['autor'];
+        $pvd->image = $_REQUEST['image'];
 
         $this->model->Actualizar($pvd);
 

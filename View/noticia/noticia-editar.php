@@ -70,6 +70,14 @@
     <div class="field">
         <textarea rows="10" cols="200" name="content" value="<?php echo $pvd->content; ?>" class="form-control" placeholder="<?php echo $pvd->content; ?>" data-validacion-tipo="requerido|min:100" /></textarea>
   </div>
+  <div>
+      <label>Image</label>
+      <div class="field">
+        <input type="file" name="image"/></br>
+        <br>
+        <img src="data:image;base64, <?php echo $pvd->image?>" height="150" width="150"> 
+      </div>
+ </div>
   <h4 class="ui dividing header">Datos Autor</h4>
   <div class="field">
       <label>Nombre</label>
