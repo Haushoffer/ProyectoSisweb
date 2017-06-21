@@ -52,36 +52,39 @@
 </center>
 <div class="ui segment">
 <form id="frm-noticia" class="ui form" action="?c=noticia&a=Editar" method="post" enctype="multipart/form-data">
-  <h4 class="ui dividing header">Datos Noticia</h4>
+<h4 class="ui dividing header">Datos Noticia</h4>
   <div class="field">
     <label>Id</label>
       <div class="field">
-        <input type="text" name="id" value="<?php echo $pvd->id; ?>" class="form-control" placeholder="Ingrese Id" data-validacion-tipo="requerido|min:1" />
+        <input type="text" name="id" pattern="[0-9].{1,}" value="<?php echo $pvd->id; ?>" class="form-control" placeholder="Ingrese Id" required="required" oninvalid="setCustomValidity('Please enter a valid id')"
+    onchange="try{setCustomValidity('')}catch(e){}" />
   	  </div>
    </div>
   <div class="field">
     <label>Title</label>
       <div class="field">
-        <input type="text" name="title" value="<?php echo $pvd->title; ?>" class="form-control" placeholder="Ingrese Titulo" data-validacion-tipo="requerido|min:100" />
+        <input type="text" name="title" pattern="[A-Za-z0-9].{5,20}" value="<?php echo $pvd->title; ?>" class="form-control" placeholder="Ingrese Titulo" required="required" oninvalid="setCustomValidity('Please enter a valid title with just letters')"
+    onchange="try{setCustomValidity('')}catch(e){}"/>
   	  </div>
    </div>
   <div class="field">
     <label>Contenido</label>
     <div class="field">
-        <textarea rows="10" cols="200" name="content" value="<?php echo $pvd->content; ?>" class="form-control" placeholder="<?php echo $pvd->content; ?>" data-validacion-tipo="requerido|min:100" /></textarea>
+        <textarea rows="10" cols="200" name="content" pattern="[a-zA-Z0-9].{10,10000}" value="<?php echo $pvd->content; ?>" class="form-control" placeholder="Ingrese Contenido" required="required" oninvalid="setCustomValidity('Please enter the content just with letters and numbers')"
+    onchange="try{setCustomValidity('')}catch(e){}" /></textarea>
+    </div>
   </div>
-  <div>
+  <div class="field">
       <label>Image</label>
       <div class="field">
-        <input type="file" name="image"/></br>
-        <br>
-        <img src="data:image;base64, <?php echo $pvd->image?>" height="150" width="150"> 
+           <input type="file" value="<?php echo $pvd->image; ?>" name="image"/>
       </div>
- </div>
+  </div>
   <h4 class="ui dividing header">Datos Autor</h4>
   <div class="field">
       <label>Nombre</label>
-      <input type="text" name="autor" value="<?php echo $pvd->autor; ?>" class="form-control" placeholder="Ingrese Autor" data-validacion-tipo="requerido|min:10" />
+      <input type="text" name="autor" pattern="[A-Za-z].{5,20}" value="<?php echo $pvd->autor; ?>" class="form-control" placeholder="Ingrese Autor" required="required" oninvalid="setCustomValidity('Please enter a valid Autor Name')"
+    onchange="try{setCustomValidity('')}catch(e){}"/>
   </div>
   <center>
   <br><br>
@@ -98,6 +101,7 @@
 <script>
     $(document).ready(function(){
         $("#frm-noticia").submit(function(){
+			alert("The News was updated properly");
             return $(this).validate();
         });
     })

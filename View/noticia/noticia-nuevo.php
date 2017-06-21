@@ -63,7 +63,7 @@
   <div class="field">
     <label>Title</label>
       <div class="field">
-        <input type="text" name="title" pattern="[A-Za-z].{5,20}" value="<?php echo $pvd->title; ?>" class="form-control" placeholder="Ingrese Titulo" required="required" oninvalid="setCustomValidity('Please enter a valid title with just letters')"
+        <input type="text" name="title" pattern="[A-Za-z0-9].{5,20}" value="<?php echo $pvd->title; ?>" class="form-control" placeholder="Ingrese Titulo" required="required" oninvalid="setCustomValidity('Please enter a valid title with just letters')"
     onchange="try{setCustomValidity('')}catch(e){}"/>
   	  </div>
    </div>
