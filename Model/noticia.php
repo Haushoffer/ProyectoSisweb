@@ -37,6 +37,23 @@ class noticia
 		}
 	}
 
+	public function ListarUser()
+	{
+		try
+		{
+			$result = array();
+			$stm = $this->pdo->prepare("SELECT * FROM noticia ORDER BY id DESC");
+			//Ejecución de la sentencia SQL.
+			$stm->execute();
+			return $stm->fetchAll(PDO::FETCH_OBJ);
+		}
+		catch(Exception $e)
+		{
+			//Obtener mensaje de error.
+			die($e->getMessage());
+		}
+	}
+
 	public function Obtener($id)
 	{
 		try

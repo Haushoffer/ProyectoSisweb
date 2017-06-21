@@ -13,7 +13,7 @@
 	<div class="ui segment">
 	<table class="ui table">
 			  <tbody>
-			   <?php foreach($this->model->Listar() as $r): ?>
+			   <?php foreach($this->model->ListarUser() as $r): ?>
 			    <tr>
 			      <td class="collapsing">
 			      	<center>

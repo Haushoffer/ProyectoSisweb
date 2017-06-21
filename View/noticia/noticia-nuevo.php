@@ -56,7 +56,7 @@
   <div class="field">
     <label>Id</label>
       <div class="field">
-        <input type="text" name="id" pattern="[0-9].{1,}" value="<?php echo $pvd->id; ?>" class="form-control" placeholder="Ingrese Id" required="required" oninvalid="setCustomValidity('Please enter a valid id')"
+        <input type="text" name="id" pattern="[0-9].{0,}" value="<?php echo $pvd->id; ?>" class="form-control" placeholder="Ingrese Id" required="required" oninvalid="setCustomValidity('Please enter a valid id')"
     onchange="try{setCustomValidity('')}catch(e){}" />
   	  </div>
    </div>
